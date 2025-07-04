@@ -1,6 +1,6 @@
 # 🎮 Games-OOP - Free-to-Play Games Browser
 
-![Website Screenshot](./screenshot.png) 
+![Website Screenshot](screenshot.png) 
 
 ## 🌟 Features
 
