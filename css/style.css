@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --dark-color: #2d3436;
+    --light-color: #f5f6fa;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--dark-color) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    color: var(--light-color);
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+.game-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#game-image {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #5649d1;
+    border-color: #5649d1;
+}
+
+
+#details-page {
+    padding-top: 2rem;
+}
+
+.game-details-card {
+    background-color: white;
+    height: 100%;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.game-meta {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.meta-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+    align-items: baseline;
+}
+
+.meta-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.meta-value {
+    color: #555;
+    word-break: break-word;
+}
+
+.game-description {
+    line-height: 1.8;
+    color: #555;
+    white-space: pre-line;
+}
+
+.description-text {
+    font-size: 1.1rem;
+}
+
+
+.status-badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.status-live {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-beta {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-alpha {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-offline {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+body.details-page nav.navbar {
+    display: none !important;
+}
+
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+#loading-spinner p {
+    animation: pulse 1.5s infinite;
+}
+
+
+@media (max-width: 992px) {
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .meta-item {
+        flex-direction: column;
+    }
+    
+    .meta-label {
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #game-image {
+        margin-bottom: 2rem;
+    }
+    
+    .game-title {
+        font-size: 1.8rem;
+    }
+}

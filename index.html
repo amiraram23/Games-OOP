@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#" id="logo">
+                <i class="fas fa-gamepad me-2"></i>GameReviews
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="categories">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-category="all">All Games</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container text-center my-5" id="loading-spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Loading games...</p>
+    </div>
+
+    <!-- Home Page -->
+    <div class="container my-5 d-none" id="home-page">
+        <div class="row g-4" id="games-container">
+
+        </div>
+    </div>
+
+    <!-- Details Page -->
+    <div class="container my-5 d-none" id="details-page">
+        <div class="row">
+
+            <div class="col-lg-6 mb-4">
+                <img src="" class="img-fluid rounded shadow-lg" id="game-image" alt="Game Image">
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="game-details-card p-4 shadow-lg rounded">
+                    <button class="btn btn-outline-primary mb-4" id="back-btn">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Games
+                    </button>
+
+                    <h1 class="game-title mb-4" id="game-title"></h1>
+
+                    <div class="game-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value" id="game-category"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Platform:</span>
+                            <span class="meta-value" id="game-platform"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Status:</span>
+                            <span class="meta-value"><span id="game-status" class="status-badge"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="game-description">
+                        <h5 class="section-title">Description</h5>
+                        <p class="description-text" id="game-description"></p>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg w-100 py-3 mt-4" id="game-link">
+                        <i class="fas fa-play me-2"></i>Show Me
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
